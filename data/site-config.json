@@ -8,18 +8,18 @@
   "personal": {
     "name": "Kenan EGE",
     "nickname": "Kaegean",
-    "avatar": "./assets/images/avatar4.gif",
+    "avatar": "./assets/images/kenan.jpg",
     "titles": [
-      "👾 Computer Engineer",
-      "🎮 Game Developer",
-      "🎸 Amateur Musician"
+      "💻 Software Engineer",
+      "🛠️ Full Stack Developer",
+      "🎮 Game Developer"
     ],
     "birthday": "1999-12-07",
     "birthdayDisplay": "December 7, 1999",
     "location": "Warsaw, PL",
     "about": {
-      "greeting": "Hi 👾, I'm Kenan Ege",
-      "description": "A passionate Computer Engineer / Game Developer from Turkey! <br> I'm deeply into Game Development. Currently exploring vast real-life open world, seeking stories and side missions that are worth telling and experiencing.  <br> 🎮👾"
+      "greeting": "Hello World! 🌍, I'm Kenan Ege",
+      "description": "A result-oriented <strong>Software Engineer</strong> with a strong foundation in <strong>Java, Spring Boot, and Cloud Technologies</strong>. <br> I specialize in designing scalable backend systems, optimizing development workflows with Docker & CI/CD, and building efficient web applications. <br><br> While my core focus is Enterprise Software, I also maintain a strong passion for <strong>Game Development</strong>, utilizing my C++ and C# skills to create interactive experiences."
     }
   },
   "external": {

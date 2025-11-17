@@ -2,32 +2,32 @@
   {
     "id": 1,
     "platform": "GitHub",
-    "icon": "logo-github",
-    "iconType": "ionicon",
+    "icon": "fa-github",
+    "iconType": "fontawesome",
     "url": "https://github.com/KenanAegean",
     "visible": true
   },
   {
     "id": 2,
     "platform": "LinkedIn",
-    "icon": "logo-linkedin",
-    "iconType": "ionicon",
+    "icon": "fa-linkedin",
+    "iconType": "fontawesome",
     "url": "https://www.linkedin.com/in/kenanege/",
     "visible": true
   },
   {
     "id": 3,
     "platform": "Instagram",
-    "icon": "logo-instagram",
-    "iconType": "ionicon",
+    "icon": "fa-instagram",
+    "iconType": "fontawesome",
     "url": "https://www.instagram.com/kenanege/",
     "visible": true
   },
   {
     "id": 4,
     "platform": "YouTube",
-    "icon": "logo-youtube",
-    "iconType": "ionicon",
+    "icon": "fa-youtube",
+    "iconType": "fontawesome",
     "url": "https://www.youtube.com/channel/UCds6Gb5gvdc6_zyXa8u5e0w",
     "visible": true
   },
@@ -42,8 +42,8 @@
   {
     "id": 6,
     "platform": "SoundCloud",
-    "icon": "logo-soundcloud",
-    "iconType": "ionicon",
+    "icon": "fa-soundcloud",
+    "iconType": "fontawesome",
     "url": "https://soundcloud.com/kenan-ege",
     "visible": true
   },

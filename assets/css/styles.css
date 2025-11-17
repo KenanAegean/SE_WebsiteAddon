@@ -727,7 +727,7 @@ body::before {
     width: 60px;
     height: 60px;
     object-fit: contain;
-    background: white;
+    background: var(--bg-tertiary);
     padding: 0.5rem;
     border-radius: var(--border-radius-sm);
 }
@@ -826,7 +826,7 @@ body::before {
     width: 80px;
     height: 80px;
     object-fit: contain;
-    background: white;
+    background: var(--bg-tertiary);
     padding: 0.75rem;
     border-radius: var(--border-radius-sm);
     margin-bottom: var(--spacing-md);
@@ -951,6 +951,14 @@ body::before {
     color: var(--text-primary);
     margin-bottom: var(--spacing-sm);
     font-weight: 600;
+}
+
+.project-description {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing-md);
+    flex-grow: 1;
 }
 
 .project-tags {
