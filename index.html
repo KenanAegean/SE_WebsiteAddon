@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kenan Ege - Software Engineer & Game Developer Portfolio">
+    <meta name="keywords" content="Software Engineer, Game Developer, Full Stack Developer, C++, Java, Unity, Unreal Engine">
+    <meta name="author" content="Kenan Ege">
+    <title>Kenan Ege | Software Engineer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.css" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">KenanEge</span>
+                <span class="logo-bracket">/&gt;</span>
+            </a>
+            
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#experience" class="nav-link">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#education" class="nav-link">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link">Projects</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#games" class="nav-link">Games</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="assets/pdf/KenanEGE_CV_PL.pdf" class="nav-link btn-resume" target="_blank">
+                        <i class="fas fa-download"></i> Resume
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-greeting">Hi there, I'm</p>
+                    <h1 class="hero-name">
+                        <span class="gradient-text" id="hero-name">Kenan Ege</span>
+                    </h1>
+                    <h2 class="hero-title">
+                        <span class="typing-text" id="typing-text"></span>
+                        <span class="cursor">|</span>
+                    </h2>
+                    <p class="hero-description" id="hero-description">
+                        A passionate Software Engineer with 3+ years of experience in full-stack development,
+                        DevOps, and cloud technologies. Currently exploring game development with Unity and Unreal Engine.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i> Get In Touch
+                        </a>
+                        <a href="#projects" class="btn btn-secondary">
+                            <i class="fas fa-code"></i> View Projects
+                        </a>
+                    </div>
+                    <div class="hero-social" id="hero-social">
+                        <!-- Social links will be injected here -->
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <img src="" alt="Kenan Ege" id="hero-avatar" class="hero-avatar">
+                        <div class="image-border"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about" class="scroll-down">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Get To Know More</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-description" id="about-description">
+                        <!-- Will be loaded from JSON -->
+                    </div>
+                    <div class="about-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span id="about-location">Warsaw, Poland</span>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:kenan.ege99@gmail.com">kenan.ege99@gmail.com</a>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span>Available for opportunities</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-skills">
+                    <h3 class="skills-title">Technical Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-category">
+                            <h4><i class="fas fa-code"></i> Languages</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">C++</span>
+                                <span class="skill-tag">C#</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">TypeScript</span>
+                                <span class="skill-tag">SQL</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4><i class="fas fa-laptop-code"></i> Technologies</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Spring Boot</span>
+                                <span class="skill-tag">Django</span>
+                                <span class="skill-tag">Docker</span>
+                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">CI/CD</span>
+                                <span class="skill-tag">REST APIs</span>
+                                <span class="skill-tag">MySQL</span>
+                                <span class="skill-tag">PostgreSQL</span>
+                            </div>
+                        </div>
+                        <div class="skill-category">
+                            <h4><i class="fas fa-gamepad"></i> Game Development</h4>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Unity</span>
+                                <span class="skill-tag">Unreal Engine 5</span>
+                                <span class="skill-tag">Blueprints</span>
+                                <span class="skill-tag">Game Physics</span>
+                                <span class="skill-tag">AI Systems</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Career Journey</span>
+                <h2 class="section-title">Professional Experience</h2>
+            </div>
+            <div class="timeline" id="experience-timeline">
+                <!-- Experience items will be loaded from JSON -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Academic Background</span>
+                <h2 class="section-title">Education</h2>
+            </div>
+            <div class="education-grid" id="education-grid">
+                <!-- Education items will be loaded from JSON -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Software Engineering Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web application">Web Apps</button>
+                <button class="filter-btn" data-filter="windows application">Desktop Apps</button>
+                <button class="filter-btn" data-filter="mobile application">Mobile Apps</button>
+                <button class="filter-btn" data-filter="game development">Game Dev</button>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects will be loaded from JSON -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="games section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Interactive Entertainment</span>
+                <h2 class="section-title">Game Development</h2>
+            </div>
+            <div class="games-intro">
+                <p>Beyond software engineering, I'm passionate about creating interactive experiences. Here are some of my game projects built with Unity and Unreal Engine.</p>
+            </div>
+            <div class="games-grid" id="games-grid">
+                <!-- Games will be loaded from JSON -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Let's Connect</span>
+                <h2 class="section-title">Get In Touch</h2>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's work together!</h3>
+                    <p>I'm currently open to new opportunities and interesting projects. Whether you have a question or just want to say hi, feel free to reach out!</p>
+                    
+                    <div class="contact-methods">
+                        <a href="mailto:kenan.ege99@gmail.com" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>Email</h4>
+                                <p>kenan.ege99@gmail.com</p>
+                            </div>
+                        </a>
+                        
+                        <a href="https://www.linkedin.com/in/kenanege/" target="_blank" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>LinkedIn</h4>
+                                <p>linkedin.com/in/kenanege</p>
+                            </div>
+                        </a>
+                        
+                        <a href="https://github.com/KenanAegean" target="_blank" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div class="method-info">
+                                <h4>GitHub</h4>
+                                <p>github.com/KenanAegean</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="contact-social" id="contact-social">
+                        <!-- Social links will be injected here -->
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                    <div class="form-note">
+                        <i class="fas fa-info-circle"></i>
+                        <p>Note: This form opens your default email client. You can also reach me directly at the contact methods above.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3 id="footer-name">Kenan Ege</h3>
+                    <p id="footer-subtitle">Software Engineer & Game Developer</p>
+                    <p class="footer-location" id="footer-location">
+                        <i class="fas fa-map-marker-alt"></i> Warsaw, Poland
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-links" id="footer-social">
+                        <!-- Social links will be injected here -->
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p id="footer-copyright">
+                    © 2024 Kenan Ege. All rights reserved.
+                </p>
+                <p id="footer-credits">
+                    Built with bunch of 0's and 1's
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

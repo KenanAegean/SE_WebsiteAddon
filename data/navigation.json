@@ -1,0 +1,31 @@
+[
+  {
+    "id": 1,
+    "label": "About",
+    "page": "about",
+    "order": 1,
+    "visible": true
+  },
+  {
+    "id": 2,
+    "label": "Resume",
+    "page": "resume",
+    "order": 2,
+    "visible": true
+  },
+  {
+    "id": 3,
+    "label": "Portfolio",
+    "page": "portfolio",
+    "order": 3,
+    "default": true,
+    "visible": true
+  },
+  {
+    "id": 4,
+    "label": "More",
+    "page": "more",
+    "order": 4,
+    "visible": true
+  }
+]
