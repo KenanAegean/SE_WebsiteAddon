@@ -1,0 +1,84 @@
+name: Sync to Private Repo Folder
+
+on:
+  push:
+    branches:
+      - master  # Change to your desired trigger branch
+      - develop
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  sync-to-folder:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Extract Branch Name
+        run: |
+          echo "Extracting branch name..."
+          echo "BRANCH_NAME=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
+          echo "Current branch: ${GITHUB_REF#refs/heads/}"
+
+      - name: Checkout Source Repository
+        uses: actions/checkout@v4
+        with:
+          path: source_repo
+          fetch-depth: 0
+          token: ${{ secrets.SOURCE_REPO_PAT }}
+
+      - name: Clone Destination Repository
+        env:
+          GITHUB_TOKEN: ${{ secrets.DEST_REPO_PAT }}
+        run: |
+          echo "Cloning destination repository..."
+          git clone https://${{ secrets.USERNAME }}:${{ secrets.DEST_REPO_PAT }}@github.com/${{ secrets.DEST_REPO_OWNER }}/${{ secrets.DEST_REPO_NAME }}.git dest_repo
+          cd dest_repo
+          git checkout ${{ secrets.DEST_REPO_BRANCH }}
+          echo "✅ Checked out branch: ${{ secrets.DEST_REPO_BRANCH }}"
+
+      - name: Create Target Folder if Not Exists
+        run: |
+          echo "Ensuring target folder exists..."
+          mkdir -p dest_repo/${{ secrets.TARGET_FOLDER }}
+          echo "✅ Target folder ready: ${{ secrets.TARGET_FOLDER }}"
+
+      - name: Sync Files to Target Folder
+        run: |
+          echo "Syncing files to target folder..."
+          # Option 1: Sync everything from source (excluding .git and .github)
+          rsync -av --delete \
+            --exclude '.git' \
+            --exclude '.github' \
+            --exclude '${{ secrets.EXCLUDED_FILE }}' \
+            source_repo/ dest_repo/${{ secrets.TARGET_FOLDER }}/
+          
+          echo "✅ Files synced to ${{ secrets.TARGET_FOLDER }}!"
+
+      - name: Configure Git User
+        run: |
+          cd dest_repo
+          git config user.email "github-actions@github.com"
+          git config user.name "GitHub Actions"
+
+      - name: Commit and Push Changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.DEST_REPO_PAT }}
+        run: |
+          cd dest_repo
+          git add .
+          
+          if git diff --staged --quiet; then
+            echo "✅ No changes to commit."
+          else
+            COMMIT_MSG="Sync from source repo to ${{ secrets.TARGET_FOLDER }} (${BRANCH_NAME})"
+            git commit -m "$COMMIT_MSG"
+            git push origin ${{ secrets.DEST_REPO_BRANCH }}
+            echo "✅ Changes pushed successfully!"
+          fi
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "## Sync Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- **Source Branch:** ${BRANCH_NAME}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Destination Folder:** ${{ secrets.TARGET_FOLDER }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Destination Branch:** ${{ secrets.DEST_REPO_BRANCH }}" >> $GITHUB_STEP_SUMMARY
