@@ -420,7 +420,7 @@ function handleFormSubmit(e) {
     const subject = formData.get('subject');
     const message = formData.get('message');
     
-    const mailtoLink = `mailto:kenan.ege99@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+    const mailtoLink = `mailto:developerkenanege@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
         `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
     )}`;
     
